@@ -24,7 +24,8 @@
               {
 
                 "glob": "**/*",
-                "input": "public"
+                "input": "public/images",
+                "output": "public/images"
               }
             ],
             "styles": [
