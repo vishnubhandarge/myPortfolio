@@ -1,137 +1,199 @@
+<!-- Running Text Banner -->
+<div class="running-text-container" *ngIf="currentSection === 'frontend'">
+  <div class="running-text">
+    <span>All Frontends are Developed End to End Using AI</span>
+  </div>
+</div>
+
 <header class="bg-dark text-light text-center py-5 shadow-lg">
   <h1>Vishnu S Bhandarge</h1>
-  <p class="lead">.NET Core & Angular Developer</p>
+  <p class="lead">.NET Full-Stack Developer | Database Developer</p>
   <img src="../public/images/Vishnu.jpg" class="rounded-circle mb-3" alt="Your Photo" width="150px" height="150px">
   <div class="social-icons mb-3">
       <a href="https://github.com/vishnubhandarge" class="text-light mx-2" target="_blank" title="GitHub">
-          <i class="fab fa-github fa-2x"></i>
+        <i class="fa-brands fa-github fa-fade fa-2x" style="color: #74C0FC;"></i>
       </a>
       <a href="https://www.linkedin.com/in/vishnu-bhandarge/" class="text-light mx-2" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin fa-2x"></i>
+        <i class="fa-brands fa-linkedin fa-fade fa-2x" style="color: #74C0FC;"></i>
       </a>
   </div>
+  <p class="repo-note text-warning">
+    <i class="fas fa-lock me-2"></i>
+    On GitHub, Some of the repositories are private because they contain secure credentials of the projects
+  </p>
 </header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<nav class="navbar navbar-expand-lg">
   <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                  <a class="nav-link active" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link active" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link active" href="#contact">Contact</a>
-              </li>
-          </ul>
-      </div>
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <button class="theme-toggle-btn" (click)="toggleTheme()">
+            <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <section id="about" class="py-5 section-color-1 shadow-sm">
   <div class="container">
-      <h2 class="text-center">About Me</h2>
-      <p class="text-center fade-in">I am a passionate computer science engineering student focusing on building applications using .NET Core and Angular. I enjoy creating efficient and user-friendly solutions offering a great user experience.</p>
+      <h2 class="text-center active-text">About Me</h2>
+      <p class="text-center fade-in">🚀 Aspiring Full-Stack .NET Developer | Passionate About Scalable & Secure Applications
+        I am a final-year B.Tech Computer Science student specializing in full-stack development, with a strong foundation in C#, .NET Core MVC & Web API (6 & 8), Angular 18, SQL Server 2022, and Microsoft Azure. My expertise spans across both frontend and backend technologies, allowing me to build efficient, secure, and scalable applications.
+      </p>
   </div>
 </section>
 
-<section id="projects" class="py-5 section-color-2 shadow-sm">
-  <div class="container">
-      <h2 class="text-center">Projects</h2>
-      <div class="row">
-          <div class="col-md-4 mb-4">
-              <div class="card project-card shadow">
-                  <img src="https://picsum.photos/seed/zwMt8BTabg1KHtzZUMxC2/512" class="card-img-top" alt="Project 1">
-                  <div class="card-body">
-                      <h5 class="card-title">Project 1</h5>
-                      <p class="card-text">Description of Project 1.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 mb-4">
-              <div class="card project-card shadow">
-                  <img src="https://picsum.photos/seed/nM73RppOwhcwGX2LcTPxN/512" class="card-img-top" alt="Project 2">
-                  <div class="card-body">
-                      <h5 class="card-title">Project 2</h5>
-                      <p class="card-text">Description of Project 2.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 mb-4">
-              <div class="card project-card shadow">
-                  <img src="https://picsum.photos/seed/u2RvCdetwpzcHpxX5chY8/512" class="card-img-top" alt="Project 3">
-                  <div class="card-body">
-                      <h5 class="card-title">Project 3</h5>
-                      <p class="card-text">Description of Project 3.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 mb-4">
-              <div class="card project-card shadow">
-                  <img src="https://picsum.photos/seed/LYSYKYLqVF3LPEZKysZKP/512" class="card-img-top" alt="Project 4">
-                  <div class="card-body">
-                      <h5 class="card-title">Project 4</h5>
-                      <p class="card-text">Description of Project 4.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 mb-4">
-              <div class="card project-card shadow">
-                  <img src="https://picsum.photos/seed/RXBcQTM1Ktj_IK-TnqmVt/512" class="card-img-top" alt="Project 5">
-                  <div class="card-body">
-                      <h5 class="card-title">Project 5</h5>
-                      <p class="card-text">Description of Project 5.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 mb-4">
-              <div class="card project-card shadow">
-                  <img src="https://picsum.photos/seed/U8NJ8bJzBu2Y7Xhcu53Q0/512" class="card-img-top" alt="Project 6">
-                  <div class="card-body">
-                      <h5 class="card-title">Project 6</h5>
-                      <p class="card-text">Description of Project 6.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
+<div id="projects" class="projects-intro">
+  <div>
+    <h1 class="text-center">Take a Look at My Projects</h1>
+    <div class="button-container mt-3 text-center">
+      <button class="btn animated-btn" [routerLink]="['/frontend-projects']">Frontend Projects</button>
+      <button class="btn animated-btn" [routerLink]="['/mvc-projects']">MVC Projects</button>
+      <button class="btn animated-btn" [routerLink]="['/backend-projects']">Backend Projects</button>
+    </div>
   </div>
-</section>
+</div>
+
+<!-- Projects Container -->
+<div *ngIf="showProjects" class="projects-container">
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="section-title">
+        {{currentSection === 'frontend' ? 'Frontend Projects' : 
+          currentSection === 'mvc' ? 'MVC Projects' : 'Backend Projects'}}
+      </h2>
+      <button class="btn btn-outline-danger" (click)="closeProjects()">
+        <i class="fas fa-times"></i> Close
+      </button>
+    </div>
+
+    <!-- Frontend Projects Section -->
+    <div *ngIf="currentSection === 'frontend'" class="row">
+      <div class="col-12 mb-4">
+        <div class="ai-dev-note">
+          <i class="fas fa-robot me-2"></i>
+          All Frontend Projects are developed End-to-End using AI, powered by Angular and React frameworks
+        </div>
+      </div>
+      <div *ngFor="let project of frontendProjects" class="col-md-6 mb-4">
+        <div class="card project-card h-100">
+          <img [src]="project.image" class="card-img-top" [alt]="project.title" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{project.heading}}</h6>
+            <p class="card-text">{{project.description}}</p>
+            <a [href]="project.link" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MVC Projects Section -->
+    <div *ngIf="currentSection === 'mvc'" class="row">
+      <div *ngFor="let project of mvcProjects" class="col-md-6 mb-4">
+        <div class="card project-card h-100">
+          <img [src]="project.image" class="card-img-top" [alt]="project.title" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{project.heading}}</h6>
+            <p class="card-text">{{project.description}}</p>
+            <a [href]="project.link" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend Projects Section -->
+    <div *ngIf="currentSection === 'backend'" class="row">
+      <div *ngFor="let project of backendProjects" class="col-md-6 mb-4">
+        <div class="card project-card h-100">
+          <img [src]="project.image" class="card-img-top" [alt]="project.title" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{project.heading}}</h6>
+            <p class="card-text">{{project.description}}</p>
+            <a [href]="project.link" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section id="contact" class="py-5 section-color-3 shadow-sm">
   <div class="container">
-      <h2 class="text-center">Contact Me</h2>
-      <div class="row justify-content-center">
-          <div class="col-md-8">
-              <div class="card p-4 shadow" style="background-color: #f8f9fa; border-radius: 15px;">
-                  <form action="#">
-                      <div class="mb-3">
-                          <label for="name" class="form-label">Name</label>
-                          <input type="text" class="form-control modern-input" id="name" placeholder="John Doe" required>
-                      </div>
-                      <div class="mb-3">
-                          <label for="email" class="form-label">Email</label>
-                          <input type="email" class="form-control modern-input" id="email" placeholder="you@example.com" required>
-                      </div>
-                      <div class="mb-3">
-                          <label for="message" class="form-label">Message</label>
-                          <textarea class="form-control modern-input" id="message" rows="4" placeholder="Your message..." required></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Send Message</button>
-                  </form>
+    <h2 class="text-center mb-5">Get In Touch</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="contact-options">
+          <!-- Email Contact -->
+          <div class="contact-card mb-4">
+            <div class="d-flex align-items-center">
+              <div class="contact-icon">
+                <i class="fas fa-envelope fa-2x text-primary"></i>
               </div>
+              <div class="contact-details ms-4">
+                <h5>Email Me</h5>
+                <a href="mailto:vishnubhandarge1&#64;outlook.com" class="text-decoration-none">vishnubhandarge1&#64;outlook.com</a>
+              </div>
+            </div>
           </div>
+
+          <!-- Social Media Links -->
+          <div class="contact-card mb-4">
+            <div class="d-flex align-items-center">
+              <div class="contact-icon">
+                <i class="fas fa-share-alt fa-2x text-primary"></i>
+              </div>
+              <div class="contact-details ms-4">
+                <h5>Connect With Me</h5>
+                <div class="social-links">
+                  <a href="https://github.com/vishnubhandarge" target="_blank" class="btn btn-outline-dark me-2">
+                    <i class="fab fa-github fa-fade" style="color: #74C0FC;"></i> GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/vishnu-bhandarge/" target="_blank" class="btn btn-outline-primary me-2">
+                    <i class="fa-brands fa-linkedin fa-fade " style="color: #74C0FC;"></i>LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="contact-card">
+            <div class="d-flex align-items-center">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+              </div>
+              <div class="contact-details ms-4">
+                <h5>Location</h5>
+                <p class="mb-0">Mumbai, Pune, Bangalore, Hyderabad, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </section>
 
 <footer class="bg-dark text-white text-center py-4">
-  <p>&copy; 2024 Vishnu Bhandarge. All Rights Reserved. ~Rushika Soft</p>
+  <p>&copy; 2024 Vishnu Bhandarge. All Rights Reserved.</p>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

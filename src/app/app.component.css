@@ -9,8 +9,8 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: #282828;
-  color: #892EEC;
+  background: #f5f4f4;
+  color: #7b00ff;
   height: 10vh;
   display: flex;
   justify-content: center;
