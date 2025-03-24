@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Theme Variables */
 :root {
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
@@ -8,6 +9,9 @@
   --card-bg: #ffffff;
   --border-color: rgba(0, 0, 0, 0.1);
   --shadow: rgba(0, 0, 0, 0.1);
+  --header-bg: #000000;
+  --header-text: #ffffff;
+  --navbar-text: #000000;
 }
 
 [data-theme="dark"] {
@@ -18,10 +22,29 @@
   --card-bg: #2d2d2d;
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow: rgba(0, 0, 0, 0.3);
+  --header-bg: #000000;
+  --header-text: #ffffff;
+  --navbar-text: #ffffff;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s, color 0.3s;
+}
+
+/* Global Responsive Utilities */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
