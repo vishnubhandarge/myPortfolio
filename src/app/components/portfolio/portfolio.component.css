@@ -1011,3 +1011,101 @@ header .social-links .fa-linkedin {
   font-size: 1.5rem;
 }
 
+/* API Project Cards */
+.api-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.api-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--card-hover-shadow);
+}
+
+.api-card .card-body {
+  padding: 2rem;
+}
+
+.api-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.api-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.api-card .card-title {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.api-card .card-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-stack .badge {
+  background: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.api-card .animated-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #007bff;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.api-card .animated-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .api-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .api-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .api-card .card-title {
+    font-size: 1.2rem;
+  }
+}
+
