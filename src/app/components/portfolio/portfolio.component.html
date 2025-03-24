@@ -27,26 +27,26 @@
   <div class="container">
     <a class="navbar-brand" href="#">Portfolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
           <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
+              </li>
+              <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item">
+              </li>
+              <li class="nav-item">
           <button class="theme-toggle-btn" (click)="toggleTheme()">
             <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
           </button>
-        </li>
-      </ul>
-    </div>
+              </li>
+          </ul>
+      </div>
   </div>
 </nav>
 
@@ -56,7 +56,7 @@
       <p class="text-center fade-in">🚀 Aspiring Full-Stack .NET Developer | Passionate About Scalable & Secure Applications
         I am a final-year B.Tech Computer Science student specializing in full-stack development, with a strong foundation in C#, .NET Core MVC & Web API (6 & 8), Angular 18, SQL Server 2022, and Microsoft Azure. My expertise spans across both frontend and backend technologies, allowing me to build efficient, secure, and scalable applications.
       </p>
-  </div>
+        </div>
 </section>
 
 <div id="projects" class="projects-intro">
@@ -84,21 +84,45 @@
     </div>
 
     <!-- Frontend Projects Section -->
-    <div *ngIf="currentSection === 'frontend'" class="row">
-      <div class="col-12 mb-4">
-        <div class="ai-dev-note">
-          <i class="fas fa-robot me-2"></i>
-          All Frontend Projects are developed End-to-End using AI, powered by Angular and React frameworks
+    <div *ngIf="currentSection === 'frontend'" class="row g-4">
+      <!-- LMS Project Card -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assets/images/LMS.jpeg" class="card-img-top" alt="Library Management System">
+          <div class="card-body">
+            <h5 class="card-title">Library Management System</h5>
+            <p class="card-text">A comprehensive library management solution built with modern web technologies.</p>
+            <a href="https://library-management-system-two-bice.vercel.app/" target="_blank" class="btn animated-btn">
+              <i class="fas fa-external-link-alt me-2"></i>View Project
+            </a>
+          </div>
         </div>
       </div>
-      <div *ngFor="let project of frontendProjects" class="col-md-6 mb-4">
-        <div class="card project-card h-100">
-          <img [src]="project.image" class="card-img-top" [alt]="project.title" style="height: 200px; object-fit: cover;">
+
+      <!-- User Manager Card -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assets/images/userManager.jpeg" class="card-img-top" alt="User Manager">
           <div class="card-body">
-            <h5 class="card-title">{{project.title}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{project.heading}}</h6>
-            <p class="card-text">{{project.description}}</p>
-            <a [href]="project.link" class="btn btn-primary">View Project</a>
+            <h5 class="card-title">User Manager</h5>
+            <p class="card-text">An efficient user management system with advanced features and intuitive interface.</p>
+            <a href="https://vishnuusermanager.vercel.app/" target="_blank" class="btn animated-btn">
+              <i class="fas fa-external-link-alt me-2"></i>View Project
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITI Site Card -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="assets/images/ITI site.png" class="card-img-top" alt="ITI Latur Site">
+          <div class="card-body">
+            <h5 class="card-title">ITI Latur Website</h5>
+            <p class="card-text">Modern educational institution website with comprehensive information and features.</p>
+            <a href="https://iti-latur-demo.vercel.app/" target="_blank" class="btn animated-btn">
+              <i class="fas fa-external-link-alt me-2"></i>View Project
+            </a>
           </div>
         </div>
       </div>
@@ -139,8 +163,8 @@
 <section id="contact" class="py-5 section-color-3 shadow-sm">
   <div class="container">
     <h2 class="text-center mb-5">Get In Touch</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
         <div class="contact-options">
           <!-- Email Contact -->
           <div class="contact-card mb-4">
@@ -184,12 +208,12 @@
               <div class="contact-details ms-4">
                 <h5>Location</h5>
                 <p class="mb-0">Mumbai, Pune, Bangalore, Hyderabad, India</p>
+                      </div>
+                      </div>
+                      </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
 </section>
 
